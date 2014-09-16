@@ -1,8 +1,17 @@
 package edu.jsu.mcis;
 
-import org.junit.*;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+import org.junit.Test;
 import static org.junit.Assert.*;
 
+/**
+ *
+ * @author Yi
+ */
 public class HangmanTest {
     
     // Exam Question 1
@@ -28,8 +37,8 @@ public class HangmanTest {
         boolean eIsAvailable = h.available('e');
         assertTrue(eIsAvailable);
         int numOccurrences = h.guess('e');
-        eIsAvailable = h.available('e');
-        assertFalse(eIsAvailable);
+        boolean IsAvailable = h.available('e');
+        assertFalse(IsAvailable);
     }
     
     // Exam Question 3
@@ -50,6 +59,10 @@ public class HangmanTest {
     // test pass correctly.
     @Test
     public void testSixOrMoreMissesCausesALoss() {
+        Hangman h= new Hangman();
+        h.setWord("missed");
+        for(int i=0;i<6;i++)
+            
         assertTrue(false);
     }
     
@@ -60,7 +73,8 @@ public class HangmanTest {
     // test pass correctly.
     @Test
     public void testGuessingEveryLetterBeforeSixMissesCausesAWin() {
+        Hangman h= new Hangman();
+        h.setWord("because");
         assertTrue(false);
     }
-    
 }
